@@ -1,0 +1,13 @@
+.editable-image {
+  &-modal {
+    &__header {
+      text-align: center;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

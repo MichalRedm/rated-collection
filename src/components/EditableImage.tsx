@@ -1,3 +1,4 @@
+import "./EditableImage.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
@@ -43,15 +44,17 @@ function EditableImage({ editable, src, onChange }: EditableImageProps) {
         }
       </div>
       <Modal open={imageModalOpen} onClose={() => setImageModalOpen(false)}>
-        <h1>Choose an image</h1>
-        <input
-          type="text"
-          className="input"
-          placeholder="URL"
-          value={imageModalUrl}
-          onChange={e => setImageModalUrl(e.target.value)}
-        />
-        <button className="btn" onClick={handleImageChange}>OK</button>
+        <h1 className="editable-image-modal__header">Choose an image</h1>
+        <div className="editable-image-modal__form">
+          <input
+            type="text"
+            className="input"
+            placeholder="URL"
+            value={imageModalUrl}
+            onChange={e => setImageModalUrl(e.target.value)}
+          />
+          <button className="btn" onClick={handleImageChange}>OK</button>
+        </div>
       </Modal>
     </>
   );
