@@ -1,0 +1,73 @@
+@use "./styles/colors" as *;
+@use "./styles/layout" as *;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 $app-margin;
+}
+
+body {
+  color: $txt-color;
+  background-color: $bg-color;
+  font-family: "Quicksand", sans-serif;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  cursor: pointer;
+}
+
+.btn, .input {
+  width: 100%;
+  border: 1px solid $border-color;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  background: inherit;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  color: inherit;
+  transition: all 0.1s;
+}
+
+.btn:hover {
+  background-color: $txt-color;
+  border: 1px solid $txt-color;
+  color: $bg-color;
+}
+
+.invisible-input {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  text-align: inherit;
+  font-weight: inherit;
+}

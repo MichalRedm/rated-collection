@@ -1,0 +1,57 @@
+@use "../styles/colors" as *;
+
+.list__item {
+  padding: 16px 0;
+  display: flex;
+  gap: 32px;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__left {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__right {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  &__description {
+    text-align: justify;
+  }
+
+  &__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: right;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}

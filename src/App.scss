@@ -1,0 +1,46 @@
+@use "./styles/colors" as *;
+@use "./styles/layout" as *;
+
+.app {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  padding-top: 36px + 2 * 16px;
+}
+
+.delete-btn {
+  width: 100%;
+  border: 1px solid $border-color;
+  padding: 12px;
+  border-radius: 9999px;
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: $txt-color;
+    border: 1px solid $txt-color;
+    color: $bg-color;
+  }
+}
+
+.list__no-items-found {
+  text-align: center;
+  padding: 16px;
+  font-style: italic;
+
+  &::before {
+    content: "No items found";
+  }
+}
+
+.buttons-container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  gap: 16px;
+  width: 600px;
+  max-width: calc(100% - 2 * $app-margin);
+  background-color: $bg-color;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
