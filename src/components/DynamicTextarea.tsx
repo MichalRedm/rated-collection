@@ -11,6 +11,13 @@ function DynamicTextarea(
     elem.style.height = `${elem.scrollHeight}px`;
   };
 
+  const handleInput: React.FormEventHandler<HTMLTextAreaElement> = e => {
+    resize(e.target as HTMLTextAreaElement);
+    if (props.onInput) {
+      props.onInput(e);
+    }
+  };
+
   useEffect(() => {
     if (textareaRef.current) {
       resize(textareaRef.current);
@@ -22,7 +29,7 @@ function DynamicTextarea(
       {...props}
       className={`${props.className} dynamic-textarea`}
       ref={textareaRef}
-      onInput={e => resize(e.target as HTMLTextAreaElement)}
+      onInput={handleInput}
     />
   );
 }
