@@ -45,58 +45,61 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
 
   return (
     <div className="list__item">
-      <div className="list__item__left">
-        <EditableImage
-          src={editState.imgSrc}
-          onChange={handleImageChange}
-          editable={editable}
-        />
-        <div className="list__item__rating">
-          <StarRating rating={editState.rating} />
-          {editable &&
-            <NumberInput
-              className="input"
-              min={0}
-              max={5}
-              step={0.5}
-              name="rating"
-              value={editState.rating}
-              onChange={handleInputChange}
-            />
-          }
+      <div className="list__item__row">
+        <div className="list__item__left">
+          <EditableImage
+            src={editState.imgSrc}
+            onChange={handleImageChange}
+            editable={editable}
+          />
+          <div className="list__item__rating">
+            <StarRating rating={editState.rating} />
+            {editable &&
+              <NumberInput
+                className="input"
+                min={0}
+                max={5}
+                step={0.5}
+                name="rating"
+                value={editState.rating}
+                onChange={handleInputChange}
+              />
+            }
+          </div>
+        </div>
+        <div className="list__item__right">
+          <h1 className="list__item__name">
+            {editable
+              ? (
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  className="invisible-input"
+                  value={editState.name}
+                  onChange={handleInputChange}
+                />
+              )
+              : listItem.name
+            }
+          </h1>
+          <p className="list__item__description">
+            {editable
+              ? (
+                <DynamicTextarea
+                  name="description"
+                  placeholder="Description"
+                  className="list__item__description__textarea"
+                  value={editState.description}
+                  onChange={handleInputChange}
+                />
+              )
+              : listItem.description
+            }
+          </p>
         </div>
       </div>
-      <div className="list__item__right">
-        <h1 className="list__item__name">
-          {editable
-            ? (
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="invisible-input"
-                value={editState.name}
-                onChange={handleInputChange}
-              />
-            )
-            : listItem.name
-          }
-        </h1>
-        <p className="list__item__description">
-          {editable
-            ? (
-              <DynamicTextarea
-                name="description"
-                placeholder="Description"
-                className="list__item__description__textarea"
-                value={editState.description}
-                onChange={handleInputChange}
-              />
-            )
-            : listItem.description
-          }
-        </p>
-        <div className="list__item__buttons">
+      <div className="list__item__buttons">
           {editable
             ? (
               <>
@@ -120,7 +123,6 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
             )
           }
         </div>
-      </div>
     </div>
   );
 }
