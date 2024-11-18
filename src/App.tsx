@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faSearch, faSort, faTimes } from "@fortawesome/free-solid-svg-icons";
 import ListItemData from "./types/ListItemData";
@@ -15,12 +15,20 @@ function App() {
   const [topBarTab, setTopBarTab] = useState(TopBarTab.main);
   const [sortingMethod, setSortingMethod] = useState("rating-desc");
 
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
+
   useEffect(() => {
     fetch("./list.json")
       .then(res => res.json())
       .then(setList)
       .catch(console.error);
   }, []);
+
+  useEffect(() => {
+    if (topBarTab === TopBarTab.search) {
+      searchInputRef.current?.focus();
+    }
+  }, [topBarTab]);
 
   const handleAddItem = () =>
     setList(
@@ -119,6 +127,7 @@ function App() {
               placeholder="Search..."
               value={searchText}
               onChange={e => setSearchText(e.target.value)}
+              ref={searchInputRef}
             />
             <button className="btn-small" onClick={handleCloseSearch}>
               <FontAwesomeIcon icon={faTimes} />
