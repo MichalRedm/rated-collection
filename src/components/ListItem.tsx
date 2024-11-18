@@ -1,5 +1,5 @@
 import "./ListItem.scss";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faEdit, faTimes, faTrash } from "@fortawesome/free-solid-svg-icons";
 import ListItemData from "../types/ListItemData";
@@ -19,6 +19,22 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
   const [editable, setEditable] = useState(listItem.name === "");
   const [editState, setEditState] = useState<ListItemData>({ ...listItem });
   const [confirmDeleteModalOpen, setConfirmDeleteModalOpen] = useState(false);
+  const [shouldScrollTo, setShouldScrollTo] = useState(false);
+
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (listItem.new) {
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (shouldScrollTo) {
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+      setShouldScrollTo(false);
+    }
+  }, [shouldScrollTo]);
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = e =>
     setEditState(prev => ({ ...(prev as ListItemData), [e.target.name]: e.target.value }));
@@ -29,6 +45,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
   }
 
   const handleSubmitChanges = () => {
+    setShouldScrollTo(true);
     setEditable(false);
     setListItem({ ...editState, new: undefined });
   };
@@ -47,6 +64,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
 
   return (
     <div className="list__item">
+      <div className="list__item__scroll-to" ref={ref}></div>
       <div className="list__item__row">
         <div className="list__item__left">
           <EditableImage
