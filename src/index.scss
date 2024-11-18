@@ -60,6 +60,14 @@ button {
   color: $bg-color;
 }
 
+.btn-small {
+  transition: color 0.1s;
+
+  &:hover {
+    color: #eee;
+  }
+}
+
 .invisible-input {
   background-color: transparent;
   padding: 0;

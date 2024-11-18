@@ -103,20 +103,20 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
           {editable
             ? (
               <>
-                <button onClick={handleSubmitChanges}>
+                <button className="btn-small" onClick={handleSubmitChanges}>
                   <FontAwesomeIcon icon={faCheck} />
                 </button>
-                <button onClick={handleCancelChanges}>
+                <button className="btn-small" onClick={handleCancelChanges}>
                   <FontAwesomeIcon icon={faTimes} />
                 </button>
               </>
             )
             : (
               <>
-                <button onClick={onDelete}>
+                <button className="btn-small" onClick={onDelete}>
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
-                <button onClick={handleStartEditing}>
+                <button className="btn-small" onClick={handleStartEditing}>
                   <FontAwesomeIcon icon={faEdit} />
                 </button>
               </>

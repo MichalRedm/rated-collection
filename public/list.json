@@ -1,23 +1,23 @@
 [
   {
     "id": 0,
-    "name": "Lorem",
-    "imgSrc": "https://www.catschool.co/wp-content/uploads/2023/06/orange-tabby-kitten.png",
-    "description": "Morbi semper risus diam, nec ornare diam euismod in. Sed venenatis urna quis mattis ornare. Pellentesque luctus pretium massa, id sollicitudin arcu lacinia sed. Cras nec efficitur sem, ac suscipit tellus. Nam tincidunt purus felis, dapibus pharetra enim mollis ac. Etiam lectus nibh, pulvinar a purus quis, pretium mattis nibh. Cras in lacus id turpis iaculis mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    "rating": 3
+    "name": "3x3 Rubik's cube",
+    "imgSrc": "https://cdn.prod.website-files.com/6595ca03bcd68f311fd41872/65b129c72bf87a9eec8caca6_65a059e5780a33f11ddb404d_product__3x3_main.jpeg",
+    "description": "",
+    "rating": 2.5
   },
   {
     "id": 1,
-    "name": "Dolor",
-    "imgSrc": "https://i0.wp.com/www.communitycatspodcast.com/wp-content/uploads/2023/03/Cat6.jpg?fit=800%2C800&ssl=1",
-    "description": "In dapibus nisl consequat magna tempor, quis pretium leo tempus. Cras id efficitur eros. Cras vel lacinia magna, et finibus quam. Suspendisse at turpis risus. Nam id molestie felis, id tristique mauris. Ut id semper odio. Sed volutpat dolor eget ipsum posuere posuere. Nulla vel ipsum id urna varius iaculis non at massa. Phasellus iaculis metus quam, id placerat lorem tempor eget. Vestibulum in tortor turpis. Sed diam neque, hendrerit sit amet bibendum quis, eleifend sed nunc.",
-    "rating": 4.5
+    "name": "Master Skewb",
+    "imgSrc": "https://www.kostkirubika.pl/userdata/public/gfx/657d67990e0125fb74ef73f2df60a826.jpg",
+    "description": "A more complex version of Skewb. Similarily to a regular Skewb, it rotates around corners rather than faces as the standard Rubik's cube. It has 3 layers - we could compare regular Skewb to a 2x2 and Master Skewb to 3x3. An extra difficulty level is added, but it is not that difficult to learn if you know normal Skewb.",
+    "rating": 3.5
   },
   {
     "id": 2,
-    "name": "Sit",
-    "imgSrc": "https://www.fearfreehappyhomes.com/wp-content/uploads/2021/04/bigstock-Kitten-In-Pink-Blanket-Looking-415440131.jpg",
-    "description": "Pellentesque ut eleifend lacus. Curabitur at accumsan velit, sit amet sodales turpis. Nam gravida rhoncus ante, aliquam volutpat sapien eleifend at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec at neque tortor. Duis laoreet eget nunc vel dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque imperdiet tellus sit amet augue suscipit faucibus. Aenean non nisi sed orci sollicitudin gravida.",
-    "rating": 1
+    "name": "Megaminx",
+    "imgSrc": "https://ae01.alicdn.com/kf/H9249325ac3a9448ea612778ba21f2fdcv.jpg_960x960.jpg",
+    "description": "3x3 Rubik's cube in the shape of a Dodecahedron. It is more complex, but it can be solved using algorithms from a normal Rubik's cube - therefore, there is no significant increase in the difficulty.",
+    "rating": 3
   }
 ]

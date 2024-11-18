@@ -16,7 +16,7 @@ function Modal({ open, onClose, children }: ModalProps) {
         <div className="modal-container">
           <div className="modal">
             <div className="modal__close-btn-container">
-              <button onClick={onClose}>
+              <button className="btn-small" onClick={onClose}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>

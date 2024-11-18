@@ -106,7 +106,7 @@ function App() {
               <option value="id-asc">From oldest to newest</option>
               <option value="id-desc">From newest to oldest</option>
             </select>
-            <button onClick={() => setTopBarTab(TopBarTab.main)}>
+            <button className="btn-small" onClick={() => setTopBarTab(TopBarTab.main)}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </>
@@ -120,7 +120,7 @@ function App() {
               value={searchText}
               onChange={e => setSearchText(e.target.value)}
             />
-            <button onClick={handleCloseSearch}>
+            <button className="btn-small" onClick={handleCloseSearch}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </>
