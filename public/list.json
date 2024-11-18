@@ -26,5 +26,12 @@
     "imgSrc": "https://m.media-amazon.com/images/I/51Qu6HtW9QL.jpg",
     "description": "An interesting cube that rotates around corners, unlike a normal Rubik's cube that rotates around edges. Very simple and fast to learn and to solve.",
     "rating": 1.5
+  },
+  {
+    "id": 3,
+    "name": "2x2 Rubik's cube",
+    "imgSrc": "https://cuboss.com/wp-content/uploads/2021/04/2x2-speedcube-2x2-Rubiks-cube.jpg",
+    "description": "Simplified version of a regular Rubik's cube with just corners. Can be solved with steps employed while solving 3x3, but there are other methods unique to it that allow for very fast solves and are interesting to learn.",
+    "rating": 2
   }
 ]
