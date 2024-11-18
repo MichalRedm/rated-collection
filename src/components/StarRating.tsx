@@ -1,4 +1,5 @@
 import "./StarRating.scss";
+import { cloneElement } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarFull, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
@@ -21,7 +22,7 @@ function StarRating({ rating, maxRating = 5 }: StarRatingProps) {
         ...Array(Math.floor(rating)).fill(<FontAwesomeIcon icon={faStarFull} />),
         ...(rating % 1 !== 0 ? [<FontAwesomeIcon icon={faStarHalfStroke} />] : []),
         ...Array(Math.floor(maxRating - rating)).fill(<FontAwesomeIcon icon={faStarEmpty} />)
-      ]}
+      ].map((element, index) => cloneElement(element, { key: index }))}
     </div>
   );
 }
