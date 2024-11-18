@@ -7,6 +7,7 @@ import DynamicTextarea from "./DynamicTextarea";
 import StarRating from "./StarRating";
 import NumberInput from "./NumberInput";
 import EditableImage from "./EditableImage";
+import Modal from "./Modal";
 
 interface ListItemProps {
   listItem: ListItemData;
@@ -17,6 +18,7 @@ interface ListItemProps {
 function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
   const [editable, setEditable] = useState(listItem.name === "");
   const [editState, setEditState] = useState<ListItemData>({ ...listItem });
+  const [confirmDeleteModalOpen, setConfirmDeleteModalOpen] = useState(false);
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = e =>
     setEditState(prev => ({ ...(prev as ListItemData), [e.target.name]: e.target.value }));
@@ -113,7 +115,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
             )
             : (
               <>
-                <button className="btn-small" onClick={onDelete}>
+                <button className="btn-small" onClick={() => setConfirmDeleteModalOpen(true)}>
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
                 <button className="btn-small" onClick={handleStartEditing}>
@@ -123,6 +125,13 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
             )
           }
         </div>
+        <Modal open={confirmDeleteModalOpen} onClose={() => setConfirmDeleteModalOpen(false)}>
+          <p>Are you sure you want to delete this item?</p>
+          <div style={{ display: "flex", gap: "16px" }}>
+            <button className="btn" onClick={onDelete}>Yes</button>
+            <button className="btn" onClick={() => setConfirmDeleteModalOpen(false)}>No</button>
+          </div>
+        </Modal>
     </div>
   );
 }
