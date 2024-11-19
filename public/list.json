@@ -29,9 +29,72 @@
   },
   {
     "id": 4,
-    "name": "2x2 Rubik's cube",
+    "name": "2x2 Rubik's Cube",
     "imgSrc": "https://cuboss.com/wp-content/uploads/2021/04/2x2-speedcube-2x2-Rubiks-cube.jpg",
     "description": "Simplified version of a regular Rubik's cube with just corners. Can be solved with steps employed while solving 3x3, but there are other methods unique to it that allow for very fast solves and are interesting to learn.",
     "rating": 2
+  },
+  {
+    "id": 5,
+    "name": "Square One",
+    "imgSrc": "https://www.atoutcubes.com/48153-large_default/mgc-square-one-m.jpg",
+    "description": "",
+    "rating": 4
+  },
+  {
+    "id": 6,
+    "name": "Pyraminx",
+    "imgSrc": "https://strefa-kostek.pl/25231-large_default/qiyi-ms-magnetic-pyraminx.jpg",
+    "description": "",
+    "rating": 1
+  },
+  {
+    "id": 7,
+    "name": "Megamorphix",
+    "imgSrc": "https://m.media-amazon.com/images/I/51509c+2EsL.jpg",
+    "description": "",
+    "rating": 3
+  },
+  {
+    "id": 8,
+    "name": "Gear Cube",
+    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSScYVLLXQMzxq-PXupCAd2lMj9Cv2Ofaksdg&s",
+    "description": "",
+    "rating": 0.5
+  },
+  {
+    "id": 9,
+    "name": "1x1 Rubik's Cube",
+    "imgSrc": "https://m.media-amazon.com/images/I/51TJknV3NbL.jpg",
+    "description": "",
+    "rating": 0
+  },
+  {
+    "id": 10,
+    "name": "Puppet Cube",
+    "imgSrc": "https://www.cubelelo.com/cdn/shop/files/1260035_2_c1b7e857-0479-42e8-88bd-e26086fe6177_1000x.jpg?v=1695807760",
+    "description": "",
+    "rating": 5
+  },
+  {
+    "id": 11,
+    "name": "Ghost Cube",
+    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVzZ_ik09ia1aWnzcf3unyUDdFfnN7wvd_fw&s",
+    "description": "",
+    "rating": 4.5
+  },
+  {
+    "id": 12,
+    "name": "Curvy Copter",
+    "imgSrc": "https://kubekings.de/4464-medium_default/mefferts-kurviger-copter-tom-z.jpg",
+    "description": "",
+    "rating": 4
+  },
+  {
+    "id": 13,
+    "name": "4x4+ Rubik's Cubes",
+    "imgSrc": "https://m.media-amazon.com/images/I/71q4PbSWqVL.jpg",
+    "description": "",
+    "rating": 3.5
   }
 ]
