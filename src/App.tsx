@@ -83,7 +83,7 @@ function App() {
   };
   
   const filteredList = list.filter(
-    item => item.name.toLowerCase().startsWith(searchText.toLowerCase())
+    item => item.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return (
