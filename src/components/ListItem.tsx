@@ -20,6 +20,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
   const [editState, setEditState] = useState<ListItemData>({ ...listItem });
   const [confirmDeleteModalOpen, setConfirmDeleteModalOpen] = useState(false);
   const [shouldScrollTo, setShouldScrollTo] = useState(false);
+  const [invalidName, setInvalidName] = useState(false);
 
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -39,18 +40,26 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = e =>
     setEditState(prev => ({ ...(prev as ListItemData), [e.target.name]: e.target.value }));
 
+  const handleNameInputChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+    setInvalidName(e.target.value === "");
+    handleInputChange(e);
+  };
+
   const handleStartEditing = () => {
     setEditable(true);
     setEditState({ ...listItem })
   }
 
   const handleSubmitChanges = () => {
+    setInvalidName(editState.name === "");
+    if (editState.name === "") return;
     setShouldScrollTo(true);
     setEditable(false);
     setListItem({ ...editState, new: undefined });
   };
 
   const handleCancelChanges = () => {
+    setInvalidName(false);
     if (listItem.new) {
       onDelete();
     } else {
@@ -97,12 +106,13 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
                   placeholder="Name"
                   className="invisible-input"
                   value={editState.name}
-                  onChange={handleInputChange}
+                  onChange={handleNameInputChange}
                 />
               )
               : listItem.name
             }
           </h1>
+          {invalidName && <p style={{ color: "red" }}>Name cannot be empty</p>}
           <p className="list__item__description">
             {editable
               ? (
