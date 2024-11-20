@@ -3,14 +3,14 @@
     "id": 0,
     "name": "3x3 Rubik's cube",
     "imgSrc": "https://cdn.prod.website-files.com/6595ca03bcd68f311fd41872/65b129c72bf87a9eec8caca6_65a059e5780a33f11ddb404d_product__3x3_main.jpeg",
-    "description": "",
+    "description": "Everyone knows what it is, so not much to say here :)",
     "rating": 2.5
   },
   {
     "id": 1,
     "name": "Master Skewb",
     "imgSrc": "https://www.kostkirubika.pl/userdata/public/gfx/657d67990e0125fb74ef73f2df60a826.jpg",
-    "description": "A more complex version of Skewb. Similarily to a regular Skewb, it rotates around corners rather than faces as the standard Rubik's cube. It has 3 layers - we could compare regular Skewb to a 2x2 and Master Skewb to 3x3. An extra difficulty level is added, but it is not that difficult to learn if you know normal Skewb.",
+    "description": "A more complex version of Skewb. Similarily to a regular Skewb, it rotates around corners rather than faces as the standard Rubik's cube. It has 3 layers - we could compare regular Skewb to a 2x2 and Master Skewb to 3x3. An extra difficulty level is added, but it is not that difficult to learn if you know normal Skewb. Personally, it took me very long to learn it, but I'm pretty sure its not because of the actual high difficulty level, but because of my laziness and inability to find a good tutorial on YouTube.",
     "rating": 3.5
   },
   {
@@ -38,63 +38,63 @@
     "id": 5,
     "name": "Square One",
     "imgSrc": "https://www.atoutcubes.com/48153-large_default/mgc-square-one-m.jpg",
-    "description": "",
+    "description": "Weird, shapeshifting cube. Has two types of rotation: you can rotate horizontal layers and you can perform a \"slice\", which is 180 degree vertical rotation. The cube has one very long parity algorithm that is very difficult to remember and easy to forget.",
     "rating": 4
   },
   {
     "id": 6,
     "name": "Pyraminx",
     "imgSrc": "https://strefa-kostek.pl/25231-large_default/qiyi-ms-magnetic-pyraminx.jpg",
-    "description": "",
+    "description": "Tetrahedron-shaped cube that rotates around vertices. Elements on vertices rotate independently and are trivial to solve. The cube is very simple and easy to learn. You can even pretty easily figure out by yourself how to solve it.",
     "rating": 1
   },
   {
     "id": 7,
     "name": "Megamorphix",
     "imgSrc": "https://m.media-amazon.com/images/I/51509c+2EsL.jpg",
-    "description": "",
+    "description": "A very weird tetrahedron-shaped cube that rotates around edges and shapeshifts. If you don't know what it actually is, it may look extremly intimidating - but it actaully is just a shape mod of a regular 3x3 Rubik's cube, where edges correspond to centers, outer centers to edges and vertices and inner centers to vertices. It can be solved the same as regular Rubik's cube, but you have to pay attention to orientation of pieces and learn to figure out how they are actually oriented.",
     "rating": 3
   },
   {
     "id": 8,
     "name": "Gear Cube",
     "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSScYVLLXQMzxq-PXupCAd2lMj9Cv2Ofaksdg&s",
-    "description": "",
+    "description": "A cube in which some elements rotate like gears. Looks difficult, but those rotations actually do not add much difficulty to the cube and the way the cube is constructed restricts it to only 180 degree moves - the layers do not move independently. Ultimately, the cube can even be solved by an accident and is very simple to learn.",
     "rating": 0.5
   },
   {
     "id": 9,
     "name": "1x1 Rubik's Cube",
     "imgSrc": "https://m.media-amazon.com/images/I/51TJknV3NbL.jpg",
-    "description": "",
+    "description": "This is a joke, not an actual Rubik's cube. However, it is, in some sense, actually impossible to solve :)",
     "rating": 0
   },
   {
     "id": 10,
     "name": "Puppet Cube",
     "imgSrc": "https://www.cubelelo.com/cdn/shop/files/1260035_2_c1b7e857-0479-42e8-88bd-e26086fe6177_1000x.jpg?v=1695807760",
-    "description": "",
+    "description": "A very weird cube with some small pieces and some large pieces. Looks a bit like a small cube inside of a large cube. Due to its weird construction, the cube locks in some positions, making some moves impossible and destroying many natural algorithms, making it extremely difficult. I have actually never solved this one yet.",
     "rating": 5
   },
   {
     "id": 11,
     "name": "Ghost Cube",
     "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVzZ_ik09ia1aWnzcf3unyUDdFfnN7wvd_fw&s",
-    "description": "",
+    "description": "Probably the most difficult shape mod of all 3x3 Rubik's cube shape mods. Similar to a Mirror Cube, you don;t have any colors, just shapes - but the shapes are extremely irregular and sometimes very similar. Also, when you solve it, you are not actually trying to get a cube, because when Ghost Cube is an actual cube in its final form, it's like a Rubik's Cube with two layers shifted a bit, making rest of them locked. You are actually aiming to build a shape that looks much weirder than that.",
     "rating": 4.5
   },
   {
     "id": 12,
     "name": "Curvy Copter",
     "imgSrc": "https://kubekings.de/4464-medium_default/mefferts-kurviger-copter-tom-z.jpg",
-    "description": "",
+    "description": "There are cubes that rotate around centers and vertices, so there should also be cubes rotating around edges - and Curvy Copter is such a cube. There is a bunch of new algorithms to learn, and the cube is actually capable of changing its shape; you can also do something called \"jumbling\" - a weird type of move that makes solving the cube more challenging. The fact that every move affects only a small part of the cube makes it less painful to solve.",
     "rating": 4
   },
   {
     "id": 13,
     "name": "4x4+ Rubik's Cubes",
     "imgSrc": "https://m.media-amazon.com/images/I/71q4PbSWqVL.jpg",
-    "description": "",
+    "description": "Any large variant of standard Rubik's cube. Such cubes are solved by a simple principle of reduction to a regular 3x3 - we first build centers, then edges and finally solve it like a regular Rubik's cube (except of parity on n by n by n cubes with n even). Solving such cubes requires learing a pretty long, but not super difficult parity OLL parity algorithm, PLL parity for even cubes and some methods for solving large centers - once you master it, you can solve any size.",
     "rating": 3.5
   }
 ]
