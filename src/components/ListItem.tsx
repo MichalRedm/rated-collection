@@ -47,7 +47,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
 
   const handleStartEditing = () => {
     setEditable(true);
-    setEditState({ ...listItem })
+    setEditState({ ...listItem });
   }
 
   const handleSubmitChanges = () => {
