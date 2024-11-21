@@ -8,9 +8,10 @@ interface EditableImageProps {
   editable: boolean;
   src: string;
   onChange: (newSrc: string) => void;
+  className: string;
 }
 
-function EditableImage({ editable, src, onChange }: EditableImageProps) {
+function EditableImage({ editable, src, onChange, className }: EditableImageProps) {
   const [imageModalOpen, setImageModalOpen] = useState(false);
   const [imageModalUrl, setImageModalUrl] = useState("");
   
@@ -33,11 +34,11 @@ function EditableImage({ editable, src, onChange }: EditableImageProps) {
             <img
               src={src}
               alt="Image"
-              className="list__item__img"
+              className={`editable-image ${className}`}
             />
           )
           : (
-            <div className="list__item__img">
+            <div className={`editable-image ${className}`}>
               <FontAwesomeIcon icon={faImage} />
             </div>
           )

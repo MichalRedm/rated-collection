@@ -80,6 +80,7 @@ function ListItem({ listItem, setListItem, onDelete }: ListItemProps) {
             src={editState.imgSrc}
             onChange={handleImageChange}
             editable={editable}
+            className="list__item__img"
           />
           <div className="list__item__rating">
             <StarRating rating={editState.rating} />
